@@ -1,0 +1,487 @@
+    html {
+  scroll-behavior: smooth;
+}
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #1a0a14;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('img/background.jpg') center/cover no-repeat;
+      filter: blur(5px) brightness(0.5);
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(26, 10, 20, 0.7);
+      z-index: -1;
+    }
+
+    .container {
+      text-align: center;
+      padding: 80px 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .ornamen {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .judul {
+      font-family: 'Carattere', cursive;
+      font-size: 2.5rem;
+      color: #ffb6c1;
+      margin-bottom: 10px;
+    }
+
+    .foto-mempelai {
+      width: 250px;
+      height: 300px;
+      border: 3px solid #ff69b4;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 20px auto;
+    }
+
+    .foto-mempelai img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .nama-mempelai {
+      font-family: 'Carattere', cursive;
+      font-size: 3.5rem;
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    .tanggal-acara {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      color: #ff9ecb;
+    }
+
+    .save-the-date {
+      margin-top: 30px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ff69b4;
+      font-weight: bold;
+    }
+    .dan {
+      font-family: 'Carattere', cursive;
+      margin-top: 30px;
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ff69b4;
+      font-weight: bold;
+    }
+
+    .countdown {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .countdown-box {
+      background: #ff69b4;
+      color: #1a0a14;
+      border-radius: 10px;
+      padding: 10px 15px;
+      font-weight: bold;
+      min-width: 60px;
+    }
+
+    .countdown-box span {
+      display: block;
+      font-size: 1.2rem;
+    }
+
+    .countdown-box label {
+      font-size: 0.8rem;
+    }
+
+        /* Salju pink */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      pointer-events: none;
+      z-index: 9999;
+      animation: fall linear forwards;
+    }
+
+    .snowflake span {
+      display: inline-block;
+      color: #ffb6c1;
+      animation: spin linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /*responsif  */
+    @media (max-width: 768px) {
+  .judul {
+    font-size: 2rem;
+  }
+
+  .foto-mempelai {
+    width: 200px;
+    height: 260px;
+  }
+
+  .nama-mempelai {
+    font-size: 2.8rem;
+  }
+
+  .tanggal-acara {
+    font-size: 1rem;
+  }
+
+  .countdown {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .countdown-box {
+    padding: 8px 12px;
+    min-width: 55px;
+  }
+
+  .countdown-box span {
+    font-size: 1rem;
+  }
+
+  .countdown-box label {
+    font-size: 0.75rem;
+  }
+
+  .container {
+    padding: 60px 15px;
+  }
+}
+/*ayat*/
+    .kutipan-ayat {
+  font-size: 1.5rem;
+  font-family: 'Amiri', serif;
+  color: #f4f4f4;
+  line-height: 2;
+  margin: 0 auto 20px;
+  max-width: 700px;
+}
+.names {
+  font-family: 'Carattere', cursive;
+  font-size: 5rem;
+  font-weight: normal;
+  color: #fff;
+}
+
+/*gallery*/
+    .containergallery {
+      text-align: center;
+      padding: 10px 10px;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+.gallery-slider {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 16px;
+  padding: 10px;
+  scroll-snap-align: start;
+}
+
+.gallery-track img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.gallery-track img:hover {
+  transform: scale(1.05);
+}
+/*galeri2*/
+@media screen and (max-width: 768px) {
+  .gallery-hero {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .gallery-track img {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*gift*/
+.gift-box {
+  background-color: #2a0e1d;
+  border: 2px solid #ff69b4;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+}
+
+.bank-logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.gift-box button {
+  background-color: #ff69b4;
+  color: #1a0a14;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.gift-box button:hover {
+  background-color: #ff4fa1;
+}
+/*ucapan*/
+.ucapan-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.ucapan-form input,
+.ucapan-form textarea,
+.ucapan-form select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ff69b4;
+  background-color: #2a0e1d;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.ucapan-form button {
+  background-color: #ff69b4;
+  color: #1a0a14;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ucapan-form button:hover {
+  background-color: #ff4fa1;
+}
+.form-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ff69b4;
+  background-color: #2a0e1d;
+  color: #fff;
+}
+
+.form-button {
+  background-color: #ff69b4;
+  color: #1a0a14;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #ff4fa1;
+}
+
+.ucapan-item {
+  background-color: #2a0e1d;
+  border: 1px solid #ff69b4;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ucapan-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/*navbar*/
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2a0e1d;
+  border-top: 2px solid #ff69b4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  z-index: 999;
+}
+
+.bottom-nav a {
+  color: #ff69b4;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.bottom-nav a:hover {
+  color: #fff;
+}
+
+.bottom-nav i {
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+/*musik*/
+.music-btn {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background-color: #ff69b4;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 1.2rem;
+  z-index: 1000;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+  transition: background 0.3s;
+}
+
+.music-btn:hover {
+  background-color: #ff4fa1;
+}
+/*aos*/
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/*footer*/
+.footer {
+  text-align: center;
+  padding: 40px 20px 60px;
+  background: #111;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+.wa-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background-color: #25d366;
+  box-shadow: 0 0 8px rgba(37, 211, 102, 0.5);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.wa-button:hover {
+  background-color: #1ebc59;
+}
+.logot {
+  opacity: 10;
+}
+
+/*autoscroll*/
