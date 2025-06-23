@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: url('img/berdua.jpg') no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 120, 190, 0.3); /* biru lembut overlay */
+  backdrop-filter: blur(3px); /* efek blur lembut */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 30px 25px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  border: 1px solid rgba(173, 216, 230, 0.4); /* biru muda */
+  box-shadow: 0 8px 20px rgba(70, 130, 180, 0.3);
+  max-width: 500px;
+  backdrop-filter: blur(8px);
+}
+
+.content h2 {
+  font-family: 'Carattere', cursive;
+  font-size: 52px;
+  margin: 15px 0;
+  color: #4fc3f7; /* biru cerah */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.829);
+}
+
+.judul {
+  font-family: 'Carattere', cursive;
+  font-size: 2.5rem;
+  color: #e1f5fe; /* sangat terang */
+  margin: 10px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.829);
+}
+
+.kepada {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.box-nama {
+  display: inline-block;
+  padding: 8px 20px;
+  margin: 10px 0;
+  color: #e0f7fa;
+  font-weight: bold;
+  border: 2px solid #4fc3f7;
+  border-radius: 12px;
+}
+
+.content p {
+  font-size: 17px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.foto-mempelai {
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 3px solid #4fc3f7;
+}
+
+.foto-mempelai img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-buka {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: #2196f3;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-buka:hover {
+  background: #1976d2;
+}
+
+.note {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #e1f5fe;
+  opacity: 0.85;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.829);
+}
