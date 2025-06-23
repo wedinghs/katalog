@@ -25,10 +25,6 @@
   <a href="#event"><i class="fas fa-calendar-day"></i><span></span></a>
   <a href="#gallery"><i class="fas fa-images"></i><span></span></a>
   <a href="#ucapan"><i class="fas fa-comment-dots"></i><span></span></a>
-  <button id="autoscroll-toggle" class="autoscroll-btn">
-    <i class="fas fa-play"></i>
-    <span id="autoscroll-status">ON</span>
-  </button>
 </nav>
 <!-- Musik Latar -->
 <audio id="musik" autoplay loop>
@@ -536,40 +532,5 @@
   });
 </script>
 <!--musik-->
-
-<!--autoscroll-->
-<script>
-  let autoScroll = true;
-  let scrollSpeed = 2; // pixel per frame
-  const statusText = document.getElementById("autoscroll-status");
-  const toggleBtn = document.getElementById("autoscroll-toggle");
-
-  // Tombol toggle ON/OFF
-  toggleBtn.addEventListener("click", () => {
-    autoScroll = !autoScroll;
-    statusText.innerText = autoScroll ? "ON" : "OFF";
-    toggleBtn.querySelector("i").className = autoScroll ? "fas fa-play" : "fas fa-pause";
-  });
-
-  // Loop scroll otomatis
-  function startAutoScroll() {
-    if (autoScroll) {
-      window.scrollBy(0, scrollSpeed);
-    }
-    requestAnimationFrame(startAutoScroll);
-  }
-
-  requestAnimationFrame(startAutoScroll);
-
-  // Reset autoScroll jika user scroll manual (opsional)
-  let userScrolling = false;
-  window.addEventListener("wheel", () => {
-    userScrolling = true;
-    setTimeout(() => userScrolling = false, 1000);
-  });
-</script>
-<!--autoscroll-->
-
-
 </body>
 </html>
