@@ -675,24 +675,3 @@
 .tombol-musik:hover {
   background-color: #1a0a14;
 }
-/*autoscroll*/
-.autoscroll-btn {
-  background: none;
-  border: none;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 12px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.autoscroll-btn:hover {
-  color: #ff69b4;
-}
-
-.autoscroll-btn i {
-  font-size: 18px;
-  margin-bottom: 4px;
-}
